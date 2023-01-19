@@ -2,6 +2,9 @@
 #define HITTABLE_H
 
 #include "ray.h"
+#include "rtweekend.h"
+
+class material;
 
 struct hit_record
 {
@@ -9,6 +12,7 @@ struct hit_record
     vec3 normal;
     double t;
     bool front_face;
+    shared_ptr<material> mat_ptr; // setting up ray object intersection structure
 
     // checking for inside and outside normal
     inline void set_face_normal(const ray &r, const vec3 &outward_normal)

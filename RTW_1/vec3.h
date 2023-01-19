@@ -74,6 +74,15 @@ public:
         return vec3(random_double(min, max), random_double(min, max), random_double(min, max));
     }
 
+    // near zero func, return true if it is very near to zero in all the dimensions
+    bool near_zero() const
+    {
+        // Return true if the vector is close to zero in all dimensions
+        const auto s = 1e-8;
+        // fabs() - to get the absolute value of a floating point number
+        return (fabs(e[0]) < s) && (fabs(e[1]) < s) && (fabs(e[2]) < s);
+    }
+
 public:
     double e[3];
 };
@@ -169,5 +178,13 @@ vec3 random_unit_vector()
     else
         return -in_unit_sphere;
 }*/
+
+// vectors resultant to calc the reflected ray
+vec3 reflect(const vec3 &v, const vec3 &n)
+{
+    // https://raytracing.github.io/books/RayTracingInOneWeekend.html#metal/mirroredlightreflection
+    // refer diagram
+    return v - 2 * dot(v, n) * n;
+}
 
 #endif
