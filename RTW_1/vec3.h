@@ -30,8 +30,7 @@ public:
 
     // operator overloading for unary plus
     // Returning by reference is better thus, *this
-    vec3 &
-    operator+=(const vec3 &v)
+    vec3 &operator+=(const vec3 &v)
     {
         e[0] += v.e[0];
         e[1] += v.e[1];
@@ -67,6 +66,16 @@ public:
 
 public:
     double e[3];
+
+    inline static vec3 random()
+    {
+        return vec3(random_double(), random_double(), random_double());
+    }
+
+    inline static vec3 random(double min, double max)
+    {
+        return vec3(random_double(min, max), random_double(min, max), random_double(min, max));
+    }
 };
 
 // Type aliases for vec3
@@ -126,6 +135,17 @@ inline vec3 corss(const vec3 &u, const vec3 &v)
 inline vec3 unit_vector(vec3 v)
 {
     return v / v.length();
+}
+
+vec3 random_in_unit_sphere()
+{
+    while (true)
+    {
+        auto p = vec3::random(-1, 1);
+        if (p.length_squared() >= 1)
+            continue;
+        return p;
+    }
 }
 
 #endif
