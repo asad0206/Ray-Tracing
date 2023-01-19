@@ -64,9 +64,6 @@ public:
         return e[0] * e[0] + e[1] * e[1] + e[2] * e[2];
     }
 
-public:
-    double e[3];
-
     inline static vec3 random()
     {
         return vec3(random_double(), random_double(), random_double());
@@ -76,6 +73,9 @@ public:
     {
         return vec3(random_double(min, max), random_double(min, max), random_double(min, max));
     }
+
+public:
+    double e[3];
 };
 
 // Type aliases for vec3
@@ -147,5 +147,27 @@ vec3 random_in_unit_sphere()
         return p;
     }
 }
+
+// lambertian distribution
+// it has a distribution of cos(ϕ).
+// we can achive this by picking random points on the surface of the unit spehre
+// so we pass the random_in_unit_sphere to the unit_vector
+// now we have random units to get the offset values along the surface
+vec3 random_unit_vector()
+{
+    return unit_vector(random_in_unit_sphere());
+}
+
+// uniform scatter direction | diffusion
+// uniform scatter direction for all angles away from the hit point, with no dependence on the angle from the normal
+// fast hack
+/*vec3 random_in_hemisphere(const vec3 &normal)
+{
+    vec3 in_unit_sphere = random_in_unit_sphere();
+    if (dot(in_unit_sphere, normal) > 0.0) // In the same hemisphere as the normal
+        return in_unit_sphere;
+    else
+        return -in_unit_sphere;
+}*/
 
 #endif

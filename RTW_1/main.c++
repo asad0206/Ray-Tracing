@@ -21,7 +21,10 @@ color ray_color(const ray &r, const hittable &world, int depth)
     // some rays hit are not reflecting off of not exactly at t=0 but at
     // t=-0.0000001 or t=0.0000001 so we need to ignore hits very near to 0
     {
-        point3 target = rec.p + rec.normal + random_in_unit_sphere();
+        point3 target = rec.p + rec.normal + random_unit_vector();
+
+        // point3 target = rec.p + random_in_hemisphere(rec.normal);
+
         return 0.5 * ray_color(ray(rec.p, target - rec.p), world, depth - 1);
     }
 
