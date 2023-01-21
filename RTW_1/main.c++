@@ -64,12 +64,12 @@ int main()
     world.add(make_shared<sphere>(point3(0.0, -100.5, -1.0), 100.0, material_ground));
     world.add(make_shared<sphere>(point3(0.0, 0.0, -1.0), 0.5, material_center));
     world.add(make_shared<sphere>(point3(-1.0, 0.0, -1.0), 0.5, material_left));
-    world.add(make_shared<sphere>(point3(-1.0, 0.0, -1.0), -0.4, material_left)); // hollow sphere
+    world.add(make_shared<sphere>(point3(-1.0, 0.0, -1.0), -0.45, material_left));
     world.add(make_shared<sphere>(point3(1.0, 0.0, -1.0), 0.5, material_right));
 
     // Camera
 
-    camera cam;
+    camera cam(point3(-2, 2, 1), point3(0, 0, -1), vec3(0, 1, 0), 20, aspect_ratio);
 
     // Render
 
