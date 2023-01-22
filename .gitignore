@@ -1,3 +1,3 @@
-src
-*.dll
+src/
+SDL2.dll
 Makefile
