@@ -1,0 +1,2 @@
+All the original images are in the canvas folder.
+All the images of the README file are in the media folder.
