@@ -1,18 +1,16 @@
-RTW 1
+#RTW 1
 
 Creating First Image
 
 Learnt about PPM and bitmaps
 
-![](media/image1.png){width=2.6666666666666665in
-height=2.6666666666666665in}
+![](media/image1.png)
 
 Image 1
 
 Added process indicator and created the same PPM image
 
-![](media/image1.png){width=2.6666666666666665in
-height=2.6666666666666665in}
+![](media/image1.png)
 
 Image 2
 
@@ -24,8 +22,7 @@ Added a sphere to the diagram
 
 (Surprisingly learning math in classes helped finally)
 
-![](media/image2.png){width=4.166666666666667in
-height=2.341666666666667in}
+![](media/image2.png)
 
 Image 3: Sphere and a BG
 
@@ -34,8 +31,7 @@ Continued with surface-normals.
 Created a ray_color class and hit_shere class to detect if any ray hits
 the sphere.
 
-![](media/image3.png){width=4.166666666666667in
-height=2.341666666666667in}
+![](media/image3.png)
 
 Image 4: Colored sphere according to the surface-normals
 
@@ -62,28 +58,26 @@ for it wasn't that confusing. And also added the total internal
 reflection part weirdly enough these seemed much easier after learning
 all that stuff before.
 
-![](media/image4.png){width=4.166666666666667in
-height=2.341666666666667in}![](media/image5.png){width=4.166666666666667in
-height=2.341666666666667in}![](media/image6.png){width=4.166666666666667in
-height=2.341666666666667in}![](media/image7.png){width=4.166666666666667in
-height=2.341666666666667in}![](media/image8.png){width=4.166666666666667in
-height=2.341666666666667in}![](media/image9.png){width=4.166666666666667in
-height=2.341666666666667in}![](media/image10.png){width=4.166666666666667in
-height=2.341666666666667in}![](media/image11.png){width=4.166666666666667in
-height=2.341666666666667in}![](media/image12.png){width=4.166666666666667in
-height=2.341666666666667in}![](media/image13.png){width=4.166666666666667in
-height=2.341666666666667in}![](media/image14.png){width=4.166666666666667in
-height=2.341666666666667in}![](media/image15.png){width=4.166666666666667in
-height=2.341666666666667in}![](media/image16.png){width=4.166666666666667in
-height=2.341666666666667in}![](media/image17.png){width=4.166666666666667in
-height=2.341666666666667in}![](media/image18.png){width=4.166666666666667in
-height=2.341666666666667in}
+![](media/image4.png)
+![](media/image5.png)
+![](media/image6.png)
+![](media/image7.png)
+![](media/image8.png)
+![](media/image9.png)
+![](media/image10.png)
+![](media/image11.png)
+![](media/image12.png)
+![](media/image13.png)
+![](media/image14.png)
+![](media/image15.png)
+![](media/image16.png)
+![](media/image17.png)
+![](media/image18.png)
 
 Then learnt about defocus blur and for guy who is just in college this
 blew my mind. This is amazing for what it can do.
 
-![](media/image19.png){width=4.166666666666667in
-height=2.341666666666667in}
+![](media/image19.png)
 
 It can make those spheres like this. This looks amazing.
 
@@ -95,8 +89,7 @@ Intelligent, literally. The random numbers play a huge role in it.
 Then we create a final render and man this took quite a lot time to
 render but it's beautiful.
 
-![](media/image20.png){width=6.268055555555556in
-height=3.529166666666667in}
+![](media/image20.png)
 
 FINAL RENDER
 
